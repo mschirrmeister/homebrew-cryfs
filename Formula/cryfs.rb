@@ -13,29 +13,29 @@ class Cryfs < Formula
   #   sha256 "xxx" => :big_sur
   # end
 
-  head do
-    url "https://github.com/cryfs/cryfs.git", branch: "develop", shallow: false
-  end
+  # head do
+  #   url "https://github.com/cryfs/cryfs.git", branch: "develop", shallow: false
+  # end
 
   # deprecate! date: "2020-11-10", because: "requires FUSE"
 
-  depends_on macos: :big_sur
-  depends_on "cmake" => :build
-  depends_on "boost"
-  depends_on "libomp"
-  depends_on "openssl@1.1"
-  # depends_on :macfuse if MacOS.version >= :big_sur
-  depends_on :macfuse => "4.0.4"
+  # depends_on macos: :big_sur
+  # depends_on "cmake" => :build
+  # depends_on "boost"
+  # depends_on "libomp"
+  # depends_on "openssl@1.1"
+  # # depends_on :macfuse if MacOS.version >= :big_sur
+  # depends_on :macfuse => "4.0.4"
 
-  patch do
-    url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/params.patch"
-    sha256 "ea8d27109e912a0ce3a807bfb1a8eddfe71ab521bfc21648948581cd9d115cb6"
-  end
-
-  patch do
-    url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/cmakelists.patch"
-    sha256 "4a5041e5a4c5428476c7ccf3b3591c3255c773364fe7f58ae4f412408f850f8c"
-  end
+  # patch do
+  #   url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/params.patch"
+  #   sha256 "ea8d27109e912a0ce3a807bfb1a8eddfe71ab521bfc21648948581cd9d115cb6"
+  # end
+  #
+  # patch do
+  #   url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/cmakelists.patch"
+  #   sha256 "4a5041e5a4c5428476c7ccf3b3591c3255c773364fe7f58ae4f412408f850f8c"
+  # end
 
   def install
     configure_args = [
