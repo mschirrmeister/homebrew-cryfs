@@ -1,16 +1,17 @@
-class cryfs-bigsur < Formula
+class Cryfs < Formula
   desc "Encrypts your files so you can safely store them in Dropbox, iCloud, etc."
   homepage "https://www.cryfs.org"
   url "https://github.com/cryfs/cryfs/releases/download/0.10.2/cryfs-0.10.2.tar.xz"
   sha256 "5531351b67ea23f849b71a1bc44474015c5718d1acce039cf101d321b27f03d5"
   license "LGPL-3.0"
+  revison 2
 
-  bottle do
-    cellar :any
-    rebuild 2
-    # sha256 "3a5986dc3775877188cbf4442bd72c6f20ffe1d384fefebac8041c0d8f9ff09b" => :catalina
-    sha256 "xxx" => :big_sur
-  end
+  # bottle do
+  #   cellar :any
+  #   rebuild 2
+  #   # sha256 "3a5986dc3775877188cbf4442bd72c6f20ffe1d384fefebac8041c0d8f9ff09b" => :catalina
+  #   sha256 "xxx" => :big_sur
+  # end
 
   head do
     url "https://github.com/cryfs/cryfs.git", branch: "develop", shallow: false
