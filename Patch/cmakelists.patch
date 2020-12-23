@@ -1,0 +1,12 @@
+diff -Naur cryfs-0.10.2/src/fspp/fuse/CMakeLists.txt.orig cryfs-0.10.2/src/fspp/fuse/CMakeLists.txt
+--- cryfs-0.10.2/src/fspp/fuse/CMakeLists.txt.orig   2019-06-08 22:08:25.000000000 +0200
++++ cryfs-0.10.2/src/fspp/fuse/CMakeLists.txt        2020-12-22 16:31:01.000000000 +0100
+@@ -37,7 +37,7 @@
+
+ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+   set(CMAKE_FIND_FRAMEWORK LAST)
+-  find_library_with_path(FUSE "osxfuse" FUSE_LIB_PATH)
++  find_library_with_path(FUSE "fuse" FUSE_LIB_PATH)
+   target_link_libraries(${PROJECT_NAME} PUBLIC ${FUSE})
+ else() # Linux
+   find_library_with_path(FUSE "fuse" FUSE_LIB_PATH)
