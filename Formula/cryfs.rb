@@ -25,7 +25,7 @@ class Cryfs < Formula
   depends_on "libomp"
   depends_on "openssl@1.1"
   # depends_on :macfuse if MacOS.version >= :big_sur
-  depends_on :macfuse => "4.0.4"
+  # depends_on :macfuse => "4.0.4"
 
   # patch do
   #   url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/params.patch"
