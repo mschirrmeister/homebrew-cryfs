@@ -1,4 +1,4 @@
-class cryfsbigsur < Formula
+class cryfs-bigsur < Formula
   desc "Encrypts your files so you can safely store them in Dropbox, iCloud, etc."
   homepage "https://www.cryfs.org"
   url "https://github.com/cryfs/cryfs/releases/download/0.10.2/cryfs-0.10.2.tar.xz"
