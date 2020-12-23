@@ -1,4 +1,4 @@
-class cryfs < Formula
+class cryfsbigsur < Formula
   desc "Encrypts your files so you can safely store them in Dropbox, iCloud, etc."
   homepage "https://www.cryfs.org"
   url "https://github.com/cryfs/cryfs/releases/download/0.10.2/cryfs-0.10.2.tar.xz"
@@ -7,7 +7,7 @@ class cryfs < Formula
 
   bottle do
     cellar :any
-    rebuild 1
+    rebuild 2
     # sha256 "3a5986dc3775877188cbf4442bd72c6f20ffe1d384fefebac8041c0d8f9ff09b" => :catalina
     sha256 "xxx" => :big_sur
   end
