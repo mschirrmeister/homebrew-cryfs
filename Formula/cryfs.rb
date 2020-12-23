@@ -13,9 +13,9 @@ class Cryfs < Formula
   #   sha256 "xxx" => :big_sur
   # end
 
-  # head do
-  #   url "https://github.com/cryfs/cryfs.git", branch: "develop", shallow: false
-  # end
+  head do
+    url "https://github.com/cryfs/cryfs.git", branch: "develop", shallow: false
+  end
 
   # deprecate! date: "2020-11-10", because: "requires FUSE"
 
