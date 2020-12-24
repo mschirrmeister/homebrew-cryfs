@@ -4,11 +4,11 @@ class Cryfs < Formula
   url "https://github.com/cryfs/cryfs/releases/download/0.10.2/cryfs-0.10.2.tar.xz"
   sha256 "5531351b67ea23f849b71a1bc44474015c5718d1acce039cf101d321b27f03d5"
   license "LGPL-3.0"
-  # revision 2
+  # revision 1
 
   # bottle do
   #   cellar :any
-  #   rebuild 2
+  #   rebuild 1
   #   # sha256 "3a5986dc3775877188cbf4442bd72c6f20ffe1d384fefebac8041c0d8f9ff09b" => :catalina
   #   sha256 "xxx" => :big_sur
   # end
@@ -25,8 +25,8 @@ class Cryfs < Formula
   depends_on "libomp"
   depends_on "openssl@1.1"
   # depends_on :macfuse if MacOS.version >= :big_sur
-  # depends_on :macfuse => "4.0.4"
-  depends_on :osxfuse => "3.11.2"
+  depends_on :macfuse => "4.0.4"
+  # depends_on :osxfuse => "3.11.2"
 
   # patch do
   #   url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/params.patch"
