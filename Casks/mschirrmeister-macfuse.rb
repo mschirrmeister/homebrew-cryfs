@@ -1,4 +1,4 @@
-cask "macfuse" do
+cask "mschirrmeister-macfuse" do
   version "4.0.4"
   sha256 "3e1b52a78ba6530cba2fb34a64c1da2ef969e03aeb2a58ae622cb0f09772d450"
 
