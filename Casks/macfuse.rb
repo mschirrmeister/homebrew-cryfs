@@ -9,7 +9,7 @@ cask "macfuse" do
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
 
-  pkg "Extras/macFUSE for macOS #{version}.pkg"
+  pkg "Extras/macFUSE #{version}.pkg"
 
   postflight do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
