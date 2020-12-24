@@ -24,17 +24,20 @@ class Cryfs < Formula
   depends_on "boost"
   depends_on "libomp"
   depends_on "openssl@1.1"
+
+  # Dependencies on a cask are not officially supported and do not work
   # depends_on :macfuse if MacOS.version >= :big_sur
   # depends_on :macfuse => "4.0.4"
-  depends_on "mschirrmeister/cryfs/mschirrmeister-macfuse" if MacOS.version >= :big_sur
+  # This will work that the formula itself does not give an error, but since it is actually a cask, you will get an error during install
+  # depends_on "mschirrmeister/cryfs/mschirrmeister-macfuse" if MacOS.version >= :big_sur
 
   # patch do
-  #   url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/params.patch"
+  #   url "https://github.com/mschirrmeister/homebrew-cryfs/Patch/params.patch"
   #   sha256 "ea8d27109e912a0ce3a807bfb1a8eddfe71ab521bfc21648948581cd9d115cb6"
   # end
   #
   # patch do
-  #   url "https://https://github.com/mschirrmeister/homebrew-cryfs/Patch/cmakelists.patch"
+  #   url "https://github.com/mschirrmeister/homebrew-cryfs/Patch/cmakelists.patch"
   #   sha256 "4a5041e5a4c5428476c7ccf3b3591c3255c773364fe7f58ae4f412408f850f8c"
   # end
 
@@ -56,6 +59,17 @@ class Cryfs < Formula
 
     system "cmake", ".", *configure_args, *std_cmake_args
     system "make", "install"
+  end
+
+  def caveats; <<~EOS
+    CryFS needs FUSE and for macOS Big Sur requires macFUSE 4.0.0+.
+    With the switch to version 4 the library and framework has been renamed to 'macFUSE'.
+    Either install macFUSE manually from https://osxfuse.github.io/ or via homebrew from custom tap.
+
+        brew tap mschirrmeister/cryfs
+        brew install --cask mschirrmeister-macfuse
+
+  EOS
   end
 
   test do
