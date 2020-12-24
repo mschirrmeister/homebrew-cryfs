@@ -7,7 +7,7 @@ class Cryfs < Formula
   # revision 1
 
   bottle do
-    root_url "https://github.com/mschirrmeister/homebrew-cryfs/releases/download/0.10.2/"
+    root_url "https://github.com/mschirrmeister/homebrew-cryfs/releases/download/0.10.2"
     cellar :any
     sha256 "b794a11cb00237d2a3cf0f62eb9445ac556cfe5bd3558b933cc0df7a0e5c5516" => :big_sur
     # rebuild 1
