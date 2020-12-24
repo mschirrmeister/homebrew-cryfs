@@ -10,3 +10,4 @@ diff -Naur cryfs-0.10.2/src/fspp/fuse/params.h.orig cryfs-0.10.2/src/fspp/fuse/p
  #elif defined(_MSC_VER)
  #include <fuse.h> // Dokany fuse
  #else
+

@@ -10,3 +10,4 @@ diff -Naur cryfs-0.10.2/src/fspp/fuse/CMakeLists.txt.orig cryfs-0.10.2/src/fspp/
    target_link_libraries(${PROJECT_NAME} PUBLIC ${FUSE})
  else() # Linux
    find_library_with_path(FUSE "fuse" FUSE_LIB_PATH)
+
