@@ -6,12 +6,12 @@ class Cryfs < Formula
   license "LGPL-3.0"
   # revision 1
 
-  # bottle do
-  #   cellar :any
-  #   rebuild 1
-  #   # sha256 "3a5986dc3775877188cbf4442bd72c6f20ffe1d384fefebac8041c0d8f9ff09b" => :catalina
-  #   sha256 "xxx" => :big_sur
-  # end
+  bottle do
+    root_url "https://github.com/mschirrmeister/homebrew-cryfs/releases/download/0.10.2/"
+    cellar :any
+    sha256 "b794a11cb00237d2a3cf0f62eb9445ac556cfe5bd3558b933cc0df7a0e5c5516" => :big_sur
+    # rebuild 1
+  end
 
   head do
     url "https://github.com/cryfs/cryfs.git", branch: "develop", shallow: false
@@ -31,15 +31,15 @@ class Cryfs < Formula
   # This will work that the formula itself does not give an error, but since it is actually a cask, you will get an error during install
   # depends_on "mschirrmeister/cryfs/mschirrmeister-macfuse" if MacOS.version >= :big_sur
 
-  # patch do
-  #   url "https://raw.githubusercontent.com/mschirrmeister/homebrew-cryfs/main/Patch/params.patch"
-  #   sha256 "ea8d27109e912a0ce3a807bfb1a8eddfe71ab521bfc21648948581cd9d115cb6"
-  # end
-  #
-  # patch do
-  #   url "https://raw.githubusercontent.com/mschirrmeister/homebrew-cryfs/main/Patch/cmakelists.patch"
-  #   sha256 "4a5041e5a4c5428476c7ccf3b3591c3255c773364fe7f58ae4f412408f850f8c"
-  # end
+  patch do
+    url "https://raw.githubusercontent.com/mschirrmeister/homebrew-cryfs/main/Patch/params.patch"
+    sha256 "03bc6d7fc229c3c96d352e7b6a1c65e18aefe6407bb971eb4192fab77ee025a0"
+  end
+
+  patch do
+    url "https://raw.githubusercontent.com/mschirrmeister/homebrew-cryfs/main/Patch/cmakelists.patch"
+    sha256 "e8442cceef26719a15b78b1a9cf97b8fc2caeec3b793430fccb344f4b2ccaf26"
+  end
 
   def install
     configure_args = [
